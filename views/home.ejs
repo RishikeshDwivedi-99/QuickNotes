@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="main w-full min-h-screen bg-zinc-900 text-white">
+      <div class="form p-10">
+        <form action="/add" method="post">
+          <input
+            class="block w-full bg-zinc-800 py-2 px-2 rounded-md outline-none"
+            type="text"
+            placeholder="Enter title here..."
+            name="title"
+          />
+          <textarea
+            class="block w-full bg-zinc-800 py-2 px-2 rounded-md my-3.5 resize-none outline-none"
+            type="text"
+            placeholder="Enter details here..."
+            name="details"
+          ></textarea>
+          <input
+            class="bg-blue-600 px-2.5 py-1 rounded-sm"
+            type="submit"
+            value="Submit"
+          />
+        </form>
+      </div>
+      <div class="tasks px-10 flex gap-2 flex-wrap">
+        <% if(file.length > 0) { %> <% file.forEach((f) => { %>
+        <div class="task bg-zinc-800 p-2 rounded-md">
+          <h1 class="text-3xl"><%=f.slice(0,-4)%></h1>
+          <a class="text-blue-500" href="/read/<%= f %>">Read More...</a>
+        </div>
+        <%}) }else {%>
+        <h1 class="text-zinc-500">No Tasks yet..</h1>
+        <%}%>
+      </div>
+    </div>
+  </body>
+</html>
