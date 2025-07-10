@@ -12,18 +12,7 @@ QuickNotes is a lightweight, fast, and simple note-taking web application built 
 ---
 
 ## 📁 Project Structure
-
-QuickNotes/
-├── files/               # Directory where all notes (.txt) are stored
-│   └── sample.txt       # Example note file (auto-generated when added)
-│
-├── views/               # EJS template files for rendering HTML
-│   ├── home.ejs         # Displays list of notes and add note form
-│   └── readM.ejs        # Displays content of a selected note
-│
-├── app.js               # Main Express application file
-├── package.json         # Project metadata and dependencies
-└── README.md            # Documentation (this file)
+<pre lang="text"><code> ## 📁 Project Structure ```text QuickNotes/ ├── files/ # Directory where all notes (.txt) are stored │ └── sample.txt # Example note file (auto-generated when added) │ ├── views/ # EJS template files for rendering HTML │ ├── home.ejs # Displays list of notes and add note form │ └── readM.ejs # Displays content of a selected note │ ├── index.js # Main Express application file ├── package.json # Project metadata and dependencies ``` </code></pre>
 
 
 
